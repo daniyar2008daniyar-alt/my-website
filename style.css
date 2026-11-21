@@ -1,0 +1,596 @@
+/* =========================================================
+   1) СБРОС И ОБЩИЕ СТИЛИ
+   Цветовая палитра: графитовый, тёмно-серый, светло-серый, голубой.
+   ========================================================= */
+:root {
+    --background: #0d1117;
+    --surface: #161b22;
+    --surface-raised: #1d2530;
+    --text: #e6edf3;
+    --muted: #a0adbb;
+    --accent: #79b8ff;
+    --accent-strong: #388bfd;
+    --border: #303a46;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    background-color: var(--background);
+    background-image: radial-gradient(ellipse at top, rgba(56, 139, 253, 0.09), transparent 55%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    line-height: 1.6;
+}
+
+/* Блочная модель:
+   content — текст внутри элемента,
+   padding — внутренний отступ,
+   border — граница,
+   margin — внешний отступ. */
+
+/* =========================================================
+   2) ШРИФТЫ
+   ========================================================= */
+body,
+button,
+input {
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.18;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+p {
+    line-height: 1.75;
+}
+
+.intro::first-letter {
+    color: var(--accent);
+    float: left;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 0.9;
+    margin: 5px 8px 0 0;
+}
+
+.intro::first-line {
+    font-weight: 600;
+}
+
+/* =========================================================
+   3) ЦВЕТА И ФОН
+   ========================================================= */
+#header {
+    background: linear-gradient(90deg, var(--surface), #111820);
+    border-bottom: 1px solid var(--border);
+}
+
+#main {
+    min-height: 520px;
+}
+
+#footer {
+    background-color: #11161d;
+    border-top: 1px solid var(--border);
+}
+
+/* =========================================================
+   4) ШАПКА И МЕНЮ
+   ========================================================= */
+.container {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.header-inner,
+nav,
+.nav-links,
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.header-inner {
+    min-height: 82px;
+    justify-content: space-between;
+}
+
+.logo-link {
+    display: inline-flex;
+}
+
+.logo-link img {
+    width: 56px;
+    height: 56px;
+}
+
+.nav-links {
+    list-style: none;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Для пунктов меню маркер общего псевдоэлемента списка отключаем. */
+.nav-links > li::before {
+    content: "";
+    margin-right: 0;
+}
+
+nav a {
+    display: block;
+    padding: 10px 12px;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.active {
+    color: var(--text);
+    background-color: #26384d;
+    border-radius: 6px;
+}
+
+.nav-links a.active:link,
+.nav-links a.active:visited {
+    color: var(--text);
+}
+
+/* =========================================================
+   5) ОСНОВНОЙ КОНТЕНТ
+   ========================================================= */
+.layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 28px;
+    padding: 42px 0;
+}
+
+.content,
+aside,
+.card,
+.goal,
+.toc,
+.contact-box {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.content,
+aside,
+.toc,
+.contact-box {
+    padding: 24px;
+}
+
+section,
+article {
+    margin-bottom: 30px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 34px;
+    padding: 32px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.hero img,
+.float-photo {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.float-photo {
+    float: left;
+    width: 240px;
+    margin: 0 20px 12px 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.card {
+    padding: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.highlight {
+    border-top: 4px solid var(--accent-strong);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 10px 16px;
+    border: 1px solid var(--accent-strong);
+    border-radius: 6px;
+    color: #ffffff;
+    background-color: var(--accent-strong);
+    text-decoration: none;
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+.btn:hover {
+    color: var(--text);
+    background-color: var(--surface-raised);
+}
+
+a.btn:link,
+a.btn:visited {
+    color: #ffffff;
+}
+
+mark {
+    color: #fff1c2;
+    background-color: #5c4814;
+}
+
+.toc {
+    margin-bottom: 24px;
+}
+
+.toc ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin: 0;
+    padding-left: 20px;
+}
+
+aside ul {
+    padding-left: 18px;
+}
+
+blockquote {
+    margin: 18px 0;
+    padding: 14px 18px;
+    border-left: 4px solid var(--accent-strong);
+    background-color: var(--surface-raised);
+}
+
+/* =========================================================
+   6) ТАБЛИЦЫ
+   ========================================================= */
+table {
+    width: 100%;
+    margin: 18px 0;
+    border: 1px solid var(--border);
+    border-collapse: collapse;
+}
+
+caption {
+    padding: 10px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+thead th {
+    color: #ffffff;
+    background-color: #244d78;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #1b222c;
+}
+
+tfoot td {
+    font-weight: 700;
+    background-color: #202a36;
+}
+
+col.programming {
+    background-color: rgba(121, 184, 255, 0.06);
+}
+
+/* =========================================================
+   7) ГАЛЕРЕЯ
+   ========================================================= */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.gallery-item {
+    margin: 0;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+figcaption {
+    padding: 12px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================================================
+   8) ПОДВАЛ
+   ========================================================= */
+.footer-inner {
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-inner p {
+    margin: 0;
+}
+
+/* =========================================================
+   9) КЛАССЫ-УТИЛИТЫ
+   ========================================================= */
+.text-muted {
+    color: var(--muted);
+}
+
+.small {
+    font-size: 13px;
+}
+
+.mark {
+    color: #fff1c2;
+    background-color: #5c4814;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+/* =========================================================
+   10) ПСЕВДОКЛАССЫ И ПСЕВДОЭЛЕМЕНТЫ
+   ========================================================= */
+a:link {
+    color: var(--accent);
+}
+
+a:visited {
+    color: #c4a7ff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: #ff9a8b;
+}
+
+a:focus,
+button:focus,
+input:focus {
+    outline: 3px solid rgba(121, 184, 255, 0.65);
+    outline-offset: 3px;
+}
+
+ul > li::before {
+    content: "•";
+    color: var(--accent);
+    margin-right: 7px;
+}
+
+.skill-list li:first-child,
+.toc li:first-child {
+    font-weight: 700;
+}
+
+.skill-list li:last-child,
+.toc li:last-child {
+    color: var(--muted);
+}
+
+.skill-list li:nth-child(even) {
+    background-color: var(--surface-raised);
+}
+
+/* Практические демо-проекты на странице portfolio.html. */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.project-card p {
+    color: var(--muted);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: auto;
+}
+
+.project-tags span {
+    padding: 4px 9px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--accent);
+    font-size: 12px;
+}
+
+.project-link {
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.demo-intro {
+    margin-bottom: 24px;
+    color: var(--muted);
+}
+
+.demo-card {
+    max-width: 680px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent-strong);
+    border-radius: 8px;
+    background: var(--surface-raised);
+}
+
+.demo-card dt {
+    margin-top: 14px;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.demo-card dd {
+    margin-left: 0;
+    color: var(--muted);
+}
+
+.demo-table td,
+.demo-table th {
+    min-width: 100px;
+}
+
+.demo-table,
+.demo-table caption,
+.demo-table th,
+.demo-table td {
+    color: #000000;
+    border-color: #000000;
+}
+
+.demo-table {
+    border: 2px solid #000000;
+    background-color: #ffffff;
+}
+
+.demo-table caption {
+    background-color: #ffffff;
+}
+
+.demo-table thead th {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.demo-table tbody tr,
+.demo-table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.demo-table tbody th,
+.demo-table tbody td {
+    background-color: #ffffff;
+}
+
+/* =========================================================
+   11) АДАПТИВНОСТЬ
+   ========================================================= */
+@media (max-width: 768px) {
+    .header-inner {
+        min-height: 110px;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .nav-links a {
+        width: 100%;
+    }
+
+    .layout,
+    .hero,
+    .cards,
+    .gallery,
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: 0;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero img,
+    .float-photo,
+    .gallery-item img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    .float-photo {
+        float: none;
+        margin: 0 0 16px;
+    }
+
+    .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}

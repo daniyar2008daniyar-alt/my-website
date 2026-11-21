@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Учебный проект: простая HTML-визитка студента с карточкой и ссылкой для связи.">
+    <title>Визитка студента — учебный проект Данияра</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container header-inner">
+            <a class="logo-link" href="../index.html" title="На главную страницу">
+                <img src="../images/logo.svg" alt="Логотип Данияра" width="56" height="56" title="Логотип Данияра">
+            </a>
+            <nav aria-label="Навигация проекта">
+                <ul class="nav-links">
+                    <li><a href="../portfolio.html">← Все проекты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="container layout">
+        <article class="content">
+            <p class="card-number">ПРОЕКТ 01 · HTML И CSS</p>
+            <h1>Визитка студента</h1>
+            <p class="demo-intro">Пример семантической страницы с заголовками, списком, изображением и ссылкой на электронную почту.</p>
+
+            <section class="demo-card">
+                <img class="float-photo" src="../images/daniyar-photo.svg" alt="Иллюстрация-заглушка для фотографии Данияра" width="520" height="520" title="Заменить своей фотографией">
+                <h2>Привет, я Данияр</h2>
+                <p>Я учусь на втором курсе и знакомлюсь с веб-разработкой. Эта простая визитка собрана из базовых HTML-элементов и оформлена внешним CSS-файлом.</p>
+                <p class="clear"><strong>Интересуюсь:</strong></p>
+                <ul>
+                    <li>созданием сайтов;</li>
+                    <li>программированием;</li>
+                    <li>спортом и саморазвитием.</li>
+                </ul>
+                <a class="btn" href="mailto:daniyar2008daniyar@gmail.com">Написать мне</a>
+            </section>
+
+            <p class="small text-muted">Тема курса: HTML-разметка, изображения, списки, гиперссылки и классы CSS.</p>
+        </article>
+        <aside>
+            <h2>Попробуй изменить</h2>
+            <ol>
+                <li>Текст приветствия</li>
+                <li>Список интересов</li>
+                <li>Цвет рамки в CSS</li>
+            </ol>
+        </aside>
+    </main>
+
+    <footer id="footer">
+        <div class="container footer-inner">
+            <p>Учебная работа по HTML и CSS</p>
+            <p><a href="#header">Наверх</a> · <a href="../portfolio.html">К проектам</a></p>
+        </div>
+    </footer>
+</body>
+</html>
