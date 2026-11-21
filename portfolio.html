@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Учебные проекты Данияра и план развития навыков в программировании.">
+    <meta name="keywords" content="проекты студента IT, учебные проекты HTML CSS, веб-разработка Данияр">
+    <title>Данияр — проекты и достижения</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container header-inner">
+            <a class="logo-link" href="index.html" title="На главную страницу"><img src="images/logo.svg" alt="Логотип Данияра" width="56" height="56" title="Логотип Д"></a>
+            <nav aria-label="Основное меню">
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">Обо мне</a></li>
+                    <li><a class="active" href="portfolio.html">Проекты</a></li>
+                    <li><a href="hobby.html">Хобби</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="container layout">
+        <div class="content">
+            <h1>Проекты и достижения</h1>
+            <section>
+                <h2>Мои учебные проекты</h2>
+                <p class="demo-intro">
+                    Это небольшие работающие примеры по темам курса. Открой проект,
+                    посмотри разметку и попробуй изменить текст или стили.
+                </p>
+                <div class="cards">
+                    <article class="card highlight project-card">
+                        <span class="card-number">ПРОЕКТ 01</span>
+                        <h3>Визитка студента</h3>
+                        <p>Мини-страница обо мне с заголовками, списком фактов, ссылкой на почту и CSS-карточкой.</p>
+                        <div class="project-tags"><span>HTML</span><span>Ссылки</span><span>CSS</span></div>
+                        <a class="project-link" href="demos/student-card.html">Открыть визитку →</a>
+                    </article>
+                    <article class="card project-card">
+                        <span class="card-number">ПРОЕКТ 02</span>
+                        <h3>Расписание занятий</h3>
+                        <p>Таблица учебной недели с заголовками, объединёнными ячейками и оформлением строк.</p>
+                        <div class="project-tags"><span>Таблицы</span><span>HTML</span><span>CSS</span></div>
+                        <a class="project-link" href="demos/study-schedule.html">Открыть расписание →</a>
+                    </article>
+                    <article class="card project-card">
+                        <span class="card-number">ПРОЕКТ 03</span>
+                        <h3>Путеводитель по интересам</h3>
+                        <p>Страница с якорным оглавлением, изображениями, подписями и списком увлечений.</p>
+                        <div class="project-tags"><span>Изображения</span><span>Якоря</span><span>Списки</span></div>
+                        <a class="project-link" href="demos/interests-guide.html">Открыть путеводитель →</a>
+                    </article>
+                </div>
+            </section>
+
+            <section>
+                <h2>Учебный план и хронология</h2>
+                <table>
+                    <caption>План изучения веб-технологий</caption>
+                    <colgroup>
+                        <col>
+                        <col class="programming">
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr><th rowspan="2">Раздел</th><th colspan="2">Занятия</th><th rowspan="2">Результат</th></tr>
+                        <tr><th>Тип</th><th>Тема</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td rowspan="2">HTML</td><td>Теория</td><td>Структура документа</td><td>Семантическая разметка</td></tr>
+                        <tr><td>Практика</td><td>Ссылки и изображения</td><td>Многостраничный сайт</td></tr>
+                        <tr><td rowspan="2">CSS</td><td>Теория</td><td>Селекторы и цвета</td><td>Единый стиль</td></tr>
+                        <tr><td>Практика</td><td>Flex и Grid</td><td>Адаптивная страница</td></tr>
+                        <tr><td>SEO</td><td colspan="2">Метатеги и внутренняя перелинковка</td><td>Поисковая структура</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><td colspan="4">Данная таблица демонстрирует атрибуты colspan, rowspan и colgroup.</td></tr>
+                    </tfoot>
+                </table>
+            </section>
+
+        </div>
+
+        <aside>
+            <h2>Темы в проектах</h2>
+            <ul>
+                <li>Структура HTML-документа</li>
+                <li>Ссылки и якоря</li>
+                <li>Списки и изображения</li>
+                <li>Таблицы и CSS-оформление</li>
+                <li>Адаптивная вёрстка</li>
+            </ul>
+            <p class="small text-muted">Все примеры учебные и сделаны для практики тем курса.</p>
+        </aside>
+    </main>
+
+    <footer id="footer">
+        <div class="container footer-inner">
+            <p>© 2026 Данияр</p>
+            <p><a href="#header">Наверх</a></p>
+        </div>
+    </footer>
+</body>
+</html>

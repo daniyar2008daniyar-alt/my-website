@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Личная страница Данияра: учеба в Жетысуйском университете, навыки программирования и интересы.">
+    <meta name="keywords" content="личный сайт Данияра, студент программист, сайт обо мне, веб-разработка">
+    <title>Данияр — студент-программист | Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Внутренний стиль демонстрирует второй способ подключения CSS на этой странице. -->
+    <style>
+        .welcome-box {
+            border-top: 4px solid #315f91;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container header-inner">
+            <a class="logo-link" href="index.html" title="Вернуться на главную страницу">
+                <img src="images/logo.svg" alt="Логотип Данияра" width="56" height="56" title="Логотип Данияра">
+            </a>
+            <nav aria-label="Основное меню">
+                <ul class="nav-links">
+                    <li><a class="active" href="index.html">Главная</a></li>
+                    <li><a href="about.html">Обо мне</a></li>
+                    <li><a href="portfolio.html">Проекты</a></li>
+                    <li><a href="hobby.html">Хобби</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="container">
+        <div class="layout">
+            <div class="content">
+                <section class="hero welcome-box">
+                    <div>
+                        <p class="text-muted">Студент · начинающий разработчик</p>
+                        <h1>Данияр — обо мне</h1>
+                        <!-- Встроенный стиль демонстрирует третий способ подключения CSS: прямо в атрибуте элемента. -->
+                        <p class="intro" style="max-width: 75ch;">
+                            Меня зовут <strong>Данияр</strong>. Мне 18 лет, я живу в Талдыкоргане
+                            и учусь в Жетысуйском университете имени Ильяса Жансугурова.
+                            В свободное время я люблю проводить время с друзьями,
+                            заниматься спортом и развивать свои технические навыки.
+                        </p>
+                        <a class="btn" href="about.html#skills">Посмотреть мои навыки</a>
+                    </div>
+                    <img src="images/daniyar-photo.svg" alt="Учебная заглушка для фотографии Данияра" width="520" height="520" title="Личная фотография — заменить заглушкой">
+                </section>
+
+                <section>
+                    <h2>Чем я занимаюсь</h2>
+                    <div class="cards">
+                        <article class="card highlight">
+                            <h3>Веб-разработка</h3>
+                            <p>Изучаю HTML и CSS и создаю простые, удобные страницы для учебных проектов.</p>
+                        </article>
+                        <article class="card">
+                            <h3>Программирование</h3>
+                            <p>Есть базовые знания Python и C++, а также понимаю основные принципы ООП.</p>
+                        </article>
+                        <article class="card">
+                            <h3>Саморазвитие</h3>
+                            <p>Постоянно учусь новому и развиваю практические навыки работы с компьютером.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Моя цель</h2>
+                    <div class="goal">
+                        <p>
+                            <mark>Стать квалифицированным специалистом в сфере информационных технологий</mark>
+                            и самостоятельно создавать полезные цифровые проекты.
+                        </p>
+                    </div>
+                </section>
+
+                <p><small>Страница демонстрирует HTML-документ и подключение внешнего CSS-файла.</small></p>
+            </div>
+
+            <aside>
+                <h2>Быстрые факты</h2>
+                <dl>
+                    <dt>Город</dt>
+                    <dd>Талдыкорган</dd>
+                    <dt>Возраст</dt>
+                    <dd>18 лет</dd>
+                    <dt>Курс</dt>
+                    <dd>2 курс</dd>
+                    <dt>Группа</dt>
+                    <dd>ИСР-211</dd>
+                </dl>
+                <hr>
+                <p><abbr title="Объектно-ориентированное программирование">ООП</abbr> — одна из изучаемых тем программирования.</p>
+                <p>Связь: <a href="mailto:daniyar2008daniyar@gmail.com">написать по электронной почте</a>.</p>
+            </aside>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container footer-inner">
+            <p>© 2026 Данияр</p>
+            <p><a href="#header">Наверх</a> · <a href="frames-demo.html">Учебная демонстрация фреймов</a></p>
+        </div>
+    </footer>
+</body>
+</html>

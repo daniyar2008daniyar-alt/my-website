@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Учебная демонстрация устаревших frameset и frame</title>
+</head>
+<!--
+Классические frameset/frame устарели и не входят в современную HTML-разметку.
+Они усложняют навигацию, индексацию поисковыми системами, адаптивность и доступность.
+Для публичного сайта используется iframe только как встроенный фрейм и блочная верстка HTML5.
+Требование демонстрации сохранено для темы курса.
+-->
+<frameset cols="25%,75%">
+    <frame src="frames-menu.html" name="menu" noresize scrolling="auto" frameborder="1">
+    <frame src="frames-content.html" name="content" noresize scrolling="auto" frameborder="1">
+    <noframes>
+        <body>
+            <p>Ваш браузер не поддерживает устаревшие фреймы. Откройте обычные страницы сайта.</p>
+        </body>
+    </noframes>
+</frameset>
+</html>
